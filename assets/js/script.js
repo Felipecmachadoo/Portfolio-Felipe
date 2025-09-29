@@ -92,3 +92,16 @@ document.querySelectorAll(".nav-link").forEach((link) => {
     }
   });
 });
+
+document.getElementById("contact-button").addEventListener("click", () => {
+  fullpage_api.moveTo(4);
+});
+
+document.getElementById("link-home").addEventListener("click", () => {
+  fullpage_api.moveTo(1);
+});
+
+document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  alert("Este formulario está em desenvolvimento!");
+});
