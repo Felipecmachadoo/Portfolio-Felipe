@@ -166,8 +166,11 @@ body {
 }
 
 #contact-section .contact-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   max-width: 1200px;
   margin: 0 auto;
+  gap: 5.125rem;
 }
 
 .section-home-title {
@@ -175,6 +178,7 @@ body {
   color: #e6e6e6;
   font-size: 14px;
   font-weight: 300;
+  letter-spacing: 2px;
 }
 
 .section-home-name {
@@ -257,6 +261,7 @@ body {
   font-size: 14px;
   font-weight: 300;
   color: #e6e6e6;
+  letter-spacing: 2px;
 }
 
 .section-about-name {
@@ -288,6 +293,7 @@ body {
   font-weight: 600;
   margin-bottom: 30px;
   color: white;
+  letter-spacing: 2px;
 }
 
 .tech-grid {
@@ -347,6 +353,7 @@ body {
   font-size: 14px;
   font-weight: 300;
   color: #e6e6e6;
+  letter-spacing: 2px;
 }
 
 .section-projects-name {
@@ -374,12 +381,22 @@ body {
 
 .project-image {
   height: 225px;
-  background: #1a1a1a;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px 8px 0 0; /* Se quiser bordas arredondadas */
 }
 
 .project-image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.03);
 }
 
 .project-body {
@@ -431,6 +448,163 @@ body {
 
 .project-links .link:hover {
   color: #22c55e;
+}
+
+.section-contact-title {
+  text-align: center;
+  font-family: "JetBrains Mono", Inter, sans-serif;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #e6e6e6;
+  letter-spacing: 2px;
+}
+
+.section-contact-name {
+  text-align: center;
+  font-family: "JetBrains Mono", Inter, sans-serif;
+  margin-bottom: 97px;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12rem;
+  align-items: start;
+}
+
+.contact-left {
+  display: flex;
+  gap: 2rem;
+}
+
+.contact-subtitle {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.contact-description {
+  font-size: 1.125rem;
+  color: #cccccc;
+  margin-bottom: 2rem;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #111111;
+  border-radius: 12px;
+  border: 1px solid #363636;
+  transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+  border-color: #22c55e;
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  color: #22c55e;
+}
+
+.contact-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-size: 0.875rem;
+  color: #898989;
+  font-weight: 500;
+}
+
+.contact-value {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-value:hover {
+  color: #22c55e;
+}
+
+/* Contact Form */
+.contact-form {
+  background-color: #111111;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid #363636;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.875rem;
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #22c55e;
+}
+
+.form-textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+.button-send-msg {
+  display: block;
+  width: 100%;
+  padding: 0.875rem;
+  background-color: #22c55e;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #22c55e;
 }
 
 @media screen and (max-width: 768px) {
