@@ -1,6 +1,6 @@
 new fullpage("#fullpage", {
+  licenseKey: "OPEN-SOURCE-GPLV3",
   autoScrolling: true,
-  scrollHorizontally: true,
   navigation: false,
   sectionsColor: ["#050505", "#050505", "#050505", "#050505"],
   onLeave: function (origin, destination, direction) {

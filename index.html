@@ -9,6 +9,11 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -46,12 +51,12 @@
       <section class="section" id="home-section">
         <div class="home-content">
           <div class="content-box">
-            <h1 class="info-title">PORTFÓLIO / 2025</h1>
-            <h1 class="info-name">
+            <h1 class="section-home-title">PORTFÓLIO / 2025</h1>
+            <h1 class="section-home-name">
               &lt;Felipe <br />
               Machado/&gt;
             </h1>
-            <p class="info-description">
+            <p class="section-home-text">
               Desenvolvedor Front-end pronto para contribuir em projetos
               desafiadores e impulsionar resultados da equipe.
             </p>
@@ -60,7 +65,12 @@
                 <button>Entrar em contato</button>
               </div>
               <div class="resume-button">
-                <button>Baixar currículo</button>
+                <a
+                  href="/assets/Currículo Felipe Machado.pdf"
+                  download="Currículo Felipe Machado"
+                >
+                  Baixar currículo
+                </a>
               </div>
             </div>
           </div>
@@ -72,25 +82,204 @@
 
       <!---- Seção Sobre-->
       <section class="section" id="about-section">
+        <div class="about-titles">
+          <h1 class="section-about-title">SOBRE MIM</h1>
+          <h1 class="section-about-name">&lt;Quem sou eu?/&gt;</h1>
+        </div>
+
         <div class="about-content">
           <div class="content-box">
-            <h1>Seção 2</h1>
-            <p>
-              Esta é a segunda seção. Role para baixo para ver mais conteúdo.
+            <p class="section-about-text">
+              Sou estudante de
+              <span class="highlight"
+                >Análise e Desenvolvimento de Sistemas</span
+              >
+              na FATEC e atualmente estou no
+              <span class="highlight">último termo</span> do curso. <br /><br />
+              Tenho me dedicado à área de
+              <span class="highlight">desenvolvimento front-end</span>, criando
+              projetos que unem
+              <span class="highlight">boas práticas de código</span>,
+              <span class="highlight">design responsivo</span> e
+              <span class="highlight">experiência do usuário</span>.
+              <br /><br />
+              No meu portfólio, você encontrará alguns dos
+              <span class="highlight">trabalhos acadêmicos</span> que desenvolvi
+              e que refletem meu aprendizado, evolução e paixão por transformar
+              ideias em
+              <span class="highlight">interfaces funcionais e atraentes</span>.
             </p>
+          </div>
+
+          <div class="tech-stack">
+            <h2 class="stack-title">Stack de desenvolvimento</h2>
+            <div class="tech-grid">
+              <div class="tech-item">
+                <i class="devicon-html5-plain"></i>
+                <span class="tech-name">HTML5</span>
+              </div>
+              <div class="tech-item">
+                <i class="devicon-css3-plain"></i>
+                <span class="tech-name">CSS3</span>
+              </div>
+              <div class="tech-item">
+                <i class="devicon-javascript-plain"></i>
+                <span class="tech-name">JavaScript</span>
+              </div>
+              <div class="tech-item">
+                <i class="devicon-react-original"></i>
+                <span class="tech-name">React</span>
+              </div>
+              <div class="tech-item">
+                <i class="devicon-php-plain"></i>
+                <span class="tech-name">PHP</span>
+              </div>
+              <div class="tech-item">
+                <i class="devicon-tailwindcss-original"></i>
+                <span class="tech-name">TailwindCSS</span>
+              </div>
+              <div class="tech-item">
+                <i class="devicon-github-original"></i>
+                <span class="tech-name">GitHub</span>
+              </div>
+              <div class="tech-item">
+                <i class="devicon-figma-plain"></i>
+                <span class="tech-name">Figma</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!---- Seção Projetos-->
       <section class="section" id="projects-section">
+        <div class="projects-titles">
+          <h1 class="section-projects-title">MEUS TRABALHOS</h1>
+          <h1 class="section-projects-name">&lt;Projetos/&gt;</h1>
+        </div>
+
         <div class="projects-content">
-          <div class="content-box">
-            <h1>Seção 3</h1>
-            <p>
-              Terceira seção com design responsivo e barra lateral
-              personalizada.
-            </p>
+          <div class="project-card">
+            <div class="project-image"></div>
+            <div class="project-body">
+              <h2 class="project-title">Syncronos</h2>
+              <p class="project-desc">
+                O Syncronos é um sistema web de agendamentos para barbearias,
+                salões, clínicas e outros serviços com horários definidos.
+                Permite que clientes marquem atendimentos online de forma
+                prática, enquanto profissionais gerenciam serviços, horários e
+                agenda com autonomia.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Felipecmachadoo/Syncronos"
+                  class="link"
+                  target="_blank"
+                >
+                  <i class="devicon-github-original"></i> GitHub
+                </a>
+                <a href="#" class="link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M6 3a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v7a1 1 0 0 1-2 0V5.414l-9.293 9.293a1 1 0 0 1-1.414-1.414L11.586 4H7a1 1 0 0 1-1-1z"
+                    />
+                  </svg>
+                  Ver Projeto
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplique este bloco para os outros cards -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="/assets/images/assistenteAI.png" alt="" />
+            </div>
+            <div class="project-body">
+              <h2 class="project-title">Assistente de IA para Gamers</h2>
+              <p class="project-desc">
+                Sistema que utiliza a API Gemini para funcionar como um
+                assistente de gamers, oferecendo respostas a dúvidas, sugestões
+                de builds e estratégias, além de dicas personalizadas para
+                diferentes jogos em uma interface simples e intuitiva.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Felipecmachadoo/nlw-agents"
+                  class="link"
+                  target="_blank"
+                  ><i class="devicon-github-original"></i> GitHub</a
+                >
+                <a href="#" class="link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M6 3a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v7a1 1 0 0 1-2 0V5.414l-9.293 9.293a1 1 0 0 1-1.414-1.414L11.586 4H7a1 1 0 0 1-1-1z"
+                    />
+                  </svg>
+                  Ver Projeto
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image"></div>
+            <div class="project-body">
+              <h2 class="project-title">Syncronos</h2>
+              <p class="project-desc">
+                Sistema de agendamentos online completo.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="link"
+                  ><i class="devicon-github-original"></i> GitHub</a
+                >
+                <a href="#" class="link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M6 3a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v7a1 1 0 0 1-2 0V5.414l-9.293 9.293a1 1 0 0 1-1.414-1.414L11.586 4H7a1 1 0 0 1-1-1z"
+                    />
+                  </svg>
+                  Ver Projeto
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

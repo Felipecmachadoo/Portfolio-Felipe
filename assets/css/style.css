@@ -150,13 +150,19 @@ body {
 }
 
 #about-section .about-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-#projects-section .projects-content {
+.projects-content {
   max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
 #contact-section .contact-content {
@@ -164,19 +170,21 @@ body {
   margin: 0 auto;
 }
 
-.info-title {
+.section-home-title {
   font-family: "JetBrains Mono", Inter, sans-serif;
+  color: #e6e6e6;
   font-size: 14px;
   font-weight: 300;
 }
 
-.info-name {
+.section-home-name {
+  font-family: "JetBrains Mono", Inter, sans-serif;
   margin-top: 18px;
   font-size: 48px;
   font-weight: 400;
 }
 
-.info-description {
+.section-home-text {
   max-width: 430px;
   margin-top: 36px;
   font-size: 18px;
@@ -201,17 +209,26 @@ body {
   transition: all 0.3s ease;
 }
 
-.resume-button button {
+.resume-button a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   border: solid 1px #22c55e;
   border-radius: 8px;
   width: 180px;
   height: 42px;
-  color: #22c55e;
   font-size: 16px;
   font-weight: 400;
+  color: #22c55e;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.resume-button a:hover {
+  background-color: #22c55e;
+  color: black;
 }
 
 .resume-button button:hover {
@@ -231,6 +248,189 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.section-about-title {
+  text-align: center;
+  font-family: "JetBrains Mono", Inter, sans-serif;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #e6e6e6;
+}
+
+.section-about-name {
+  text-align: center;
+  font-family: "JetBrains Mono", Inter, sans-serif;
+  margin-bottom: 97px;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.section-about-text {
+  max-width: 500px;
+  font-size: 22px;
+}
+
+.highlight {
+  color: #22c55e;
+  font-weight: 300;
+}
+
+.tech-stack {
+  width: 400px;
+}
+
+.stack-title {
+  text-align: center;
+  font-family: "JetBrains Mono", Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 24px;
+  background-color: #111111;
+  border: 1px solid #363636;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+  background-color: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.tech-item i {
+  font-size: 24px;
+  color: #22c55e;
+}
+
+.tech-icon {
+  width: 20px;
+  height: 20px;
+  background-color: #22c55e;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+}
+
+.tech-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+.projects-titles {
+  margin-bottom: 98px;
+}
+
+.section-projects-title {
+  text-align: center;
+  font-family: "JetBrains Mono", Inter, sans-serif;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #e6e6e6;
+}
+
+.section-projects-name {
+  text-align: center;
+  font-family: "JetBrains Mono", Inter, sans-serif;
+  margin-bottom: 97px;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.project-card {
+  background: #111;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #222;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project-image {
+  height: 225px;
+  background: #1a1a1a;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.project-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 284px;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: #fff;
+}
+
+.project-desc {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  align-self: flex-start;
+  background: #212121;
+  color: #22c55e;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.project-links {
+  margin-top: auto;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.project-links .link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s;
+}
+
+.project-links .link:hover {
+  color: #22c55e;
 }
 
 @media screen and (max-width: 768px) {
