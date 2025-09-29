@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif, JetBrains Mono;
+  color: white;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 4rem;
+  backdrop-filter: transparent;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo a {
+  color: #22c55e;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link.active {
+  color: #22c55e;
+}
+
+.nav-link.active::after {
+  background: #22c55e;
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #22c55e;
+  opacity: 1;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #22c55e;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  background: #22c55e;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+#fullpage {
+  position: relative;
+}
+
+#home-section {
+  background-color: #050505;
+  color: white;
+}
+
+#about-section {
+  background-color: #050505;
+  color: white;
+}
+
+#projects-section {
+  background-color: #050505;
+  color: white;
+}
+
+#contact-section {
+  background-color: #050505;
+  color: white;
+}
+
+.content-box {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#custom-sidebar {
+  position: fixed;
+  top: 50%;
+  left: 55px;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar-item {
+  width: 8px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar-item.active {
+  background-color: white;
+  height: 60px;
+}
+
+.info-title {
+  font-family: "JetBrains Mono", Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.info-name {
+  margin-top: 18px;
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.info-description {
+  max-width: 430px;
+  margin-top: 36px;
+  font-size: 18px;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 32px;
+  gap: 24px;
+}
+
+.contact-button button {
+  background-color: #22c55e;
+  border: none;
+  border-radius: 8px;
+  width: 180px;
+  height: 42px;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.resume-button button {
+  background-color: transparent;
+  border: outset 1px #22c55e;
+  border-radius: 8px;
+  width: 180px;
+  height: 42px;
+  color: #22c55e;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background: rgba(5, 5, 5, 0.95);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    gap: 0;
+    padding: 2rem 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 1rem 0;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    padding: 1rem 0;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background: #22c55e;
+  }
+
+  .nav-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background: #22c55e;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: #22c55e;
+  }
+
+  #custom-sidebar {
+    left: 15px;
+  }
+
+  .content-box {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu.active .nav-link {
+    color: white;
+  }
+
+  .nav-menu.active .nav-link:hover,
+  .nav-menu.active .nav-link.active {
+    color: #22c55e;
+  }
+}
