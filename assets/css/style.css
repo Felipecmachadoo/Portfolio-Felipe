@@ -112,10 +112,6 @@ body {
   color: white;
 }
 
-.content-box {
-  max-width: 1200px;
-}
-
 #custom-sidebar {
   position: fixed;
   top: 50%;
@@ -141,36 +137,17 @@ body {
   height: 60px;
 }
 
+.content-box {
+  max-width: 1200px;
+}
+
+/* Seção Início do Portfólio */
 #home-section .home-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-#about-section .about-content {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.projects-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-#contact-section .contact-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 5.125rem;
 }
 
 .section-home-title {
@@ -235,11 +212,6 @@ body {
   color: black;
 }
 
-.resume-button button:hover {
-  background-color: #22c55e;
-  color: black;
-}
-
 .photo-container {
   width: 300px;
   height: 300px;
@@ -252,6 +224,16 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+/* Fim da Seção Início do Portfólio */
+
+/* Seção Sobre do Portfólio */
+#about-section .about-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .section-about-title {
@@ -323,23 +305,20 @@ body {
   color: #22c55e;
 }
 
-.tech-icon {
-  width: 20px;
-  height: 20px;
-  background-color: #22c55e;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: bold;
-  color: #000;
-}
-
 .tech-name {
   font-size: 14px;
   font-weight: 600;
   color: white;
+}
+/* Fim da Seção Sobre do Portfólio */
+
+/* Seção Projetos do Portfólio */
+.projects-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
 .projects-titles {
@@ -383,7 +362,7 @@ body {
   height: 225px;
   overflow: hidden;
   position: relative;
-  border-radius: 8px 8px 0 0; /* Se quiser bordas arredondadas */
+  border-radius: 8px 8px 0 0;
 }
 
 .project-image img {
@@ -448,6 +427,16 @@ body {
 
 .project-links .link:hover {
   color: #22c55e;
+}
+/* Fim da Seção Projetos do Portfólio */
+
+/* Seção Contato do Portfólio */
+#contact-section .contact-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 5.125rem;
 }
 
 .section-contact-title {
@@ -603,10 +592,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.form-button:hover {
-  background-color: #22c55e;
-}
-
+/* Responsividade */
 @media screen and (max-width: 768px) {
   .navbar {
     padding: 1rem 2rem;
@@ -661,16 +647,6 @@ body {
     color: #22c55e;
   }
 
-  #custom-sidebar {
-    left: 15px;
-  }
-
-  .content-box {
-    padding: 1rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
   .nav-menu.active .nav-link {
     color: white;
   }
@@ -678,5 +654,13 @@ body {
   .nav-menu.active .nav-link:hover,
   .nav-menu.active .nav-link.active {
     color: #22c55e;
+  }
+
+  #custom-sidebar {
+    left: 15px;
+  }
+
+  .content-box {
+    padding: 1rem;
   }
 }
