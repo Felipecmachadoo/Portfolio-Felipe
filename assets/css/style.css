@@ -112,7 +112,7 @@ body {
   color: white;
 }
 
-#custom-sidebar {
+#sidebar {
   position: fixed;
   top: 50%;
   left: 55px;
@@ -656,7 +656,7 @@ body {
     color: #22c55e;
   }
 
-  #custom-sidebar {
+  #sidebar {
     left: 15px;
   }
 
