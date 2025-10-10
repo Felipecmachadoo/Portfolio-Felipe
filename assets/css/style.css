@@ -321,10 +321,6 @@ body {
   gap: 2rem;
 }
 
-.projects-titles {
-  margin-bottom: 98px;
-}
-
 .section-projects-title {
   text-align: center;
   font-family: "JetBrains Mono", Inter, sans-serif;
@@ -437,6 +433,10 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   gap: 5.125rem;
+}
+
+.contact-titles {
+  margin-top: 64px;
 }
 
 .section-contact-title {
